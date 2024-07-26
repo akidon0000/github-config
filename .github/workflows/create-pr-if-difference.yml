@@ -6,7 +6,7 @@ on:
     # 毎週月曜日の9時に実行
     - cron: "0 9 * * 1"
   push:
-    branches: [main, feature/akidon0000]
+    branches: [main]
 
 permissions:
   contents: write
