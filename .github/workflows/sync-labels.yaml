@@ -14,3 +14,16 @@ jobs:
         - name: Checkout the current repository
           uses: actions/checkout@v4
 
+        - name: Checkout the label-syncer-config repository
+          uses: actions/checkout@v4
+          with:
+            repository: akidon0000/label-syncer-config
+            path: label-syncer-config
+
+        - name: Sync labels
+          uses: micnncim/action-label-syncer@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            manifest: label-syncer-config/.github/labels.yml
+
