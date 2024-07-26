@@ -26,4 +26,3 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
             manifest: label-syncer-config/.github/labels.yml
-
